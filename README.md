@@ -3,27 +3,24 @@
 
 
 We developed a novel approach to predict drug release dynamics from material characteristics in three tasks:
-- Prediction of drug release magnitude (area under the curve of drug release profile)
-- Prediction of drug release type (burst vs. delayed) defined based on area under the curve of the drug release profile
+- Prediction of drug release at 24, 48, and 72 hrs
+- Prediction of drug release type defined based on area under the curve of the drug release profile
 - Prediction of the complete drug release profile without the conventional time-input feature
 
 ## Notebook Structure
 ### Model Development & Evaluation
-#### Prediction of Drug Release Magnitude (AUC)
+#### Prediction of Drug Release at 24, 48, and 72 hrs 
 | Notebook | Model | Description |
 |----------|-------|-------------|
-| `Drug release AUC LinR.ipynb` | Linear Regression | Linear regression model training and validation |
-| `Drug release AUC RF.ipynb` | Random Forest | Random forest model training and validation |
-| `Drug release AUC XGB.ipynb` | XGBoost | Extreme gradient-boosted model training and validation |
-#### Prediction of Drug Release Type (Burst vs. Delayed)
+| `Drug release at 24, 48, and 72 h LinR.ipynb` | Linear Regression | Linear regression model training and validation |
+| `Drug release at 24, 48, and 72 h RF.ipynb` | Random Forest | Random forest model training and validation |
+| `Drug release at 24, 48, and 72 h XGB.ipynb` | XGBoost | Extreme gradient-boosted model training and validation |
+#### Prediction of Drug Release Type 
 | Notebook | Model | Technique |
 |----------|-------|-----------|
 | `Drug release type LR.ipynb` | Logistic Regression | Standard classification |
 | `Drug release type RF.ipynb` | Random Forest | Standard classification |
 | `Drug release type XGB.ipynb` | XGBoost | Standard classification |
-| `Drug release type LR-SMOTE.ipynb` | Logistic Regression | With SMOTE oversampling |
-| `Drug release type RF-SMOTE.ipynb` | Random Forest | With SMOTE oversampling |
-| `Drug release type XGB-SMOTE.ipynb` | XGBoost | With SMOTE oversampling |
 #### Prediction of Complete Drug Release Profile
 | Notebook | Model | Input Features |
 |----------|-------|---------------|
@@ -43,8 +40,8 @@ We developed a novel approach to predict drug release dynamics from material cha
 | Order | Task | Notebooks to Run |
 |-------|------|------------------|
 | 1 | Data Understanding | `Drug release AUC analysis.ipynb` |
-| 2 | AUC Magnitude Prediction | All notebooks in AUC magnitude section |
-| 3 | Release Type Classification | Standard models, then SMOTE variants |
+| 2 | 24, 48, and 72 h Drug Release Prediction | All notebooks in 24, 48, and 72 h section|
+| 3 | Release Type Classification | All notebooks in drug release type section|
 | 4 | Complete Profile Prediction | XGB-Time, XGB-No Time, RNNs |
 | 5 | Final Analysis | `Drug release profile analysis.ipynb` |
 
